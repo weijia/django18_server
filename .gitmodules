@@ -1,0 +1,6 @@
+[submodule "base_packages/libtool"]
+	path = base_packages/libtool
+	url = https://github.com/weijia/libtool.git
+[submodule "base_packages/djangoautoconf"]
+	path = base_packages/djangoautoconf
+	url = https://github.com/weijia/djangoautoconf.git
