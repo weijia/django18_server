@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import logging
 import os
 import sys
 
@@ -20,7 +21,7 @@ def initialize_settings():
     from djangoautoconf import DjangoAutoConf
     c = DjangoAutoConf()
     c.set_base_extra_settings_list([])
-    c.set_external_app_folder_name("external_app_repos")
+    c.set_external_app_repositories("external_app_repos")
     c.set_default_settings(base_setting_folder_name + ".settings")
     c.set_root_dir(get_folder(__file__))
     c.add_extra_settings_from_folder()
@@ -29,6 +30,7 @@ def initialize_settings():
 
 if __name__ == "__main__":
     # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django18_server.settings")
+    # logging.basicConfig(level=logging.DEBUG)
     initialize_settings()
     from django.core.management import execute_from_command_line
 
