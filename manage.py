@@ -20,7 +20,7 @@ include_all(__file__, external_app_folder_name)
 def initialize_settings():
     from djangoautoconf import DjangoAutoConf
     c = DjangoAutoConf()
-    c.set_base_extra_settings_list([])
+    # c.set_base_extra_settings_list([])
     c.set_external_app_repositories("external_app_repos")
     c.set_default_settings(base_setting_folder_name + ".settings")
     c.set_root_dir(get_folder(__file__))
